@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <title>Cria Contato</title>
+    <link rel="stylesheet"  href="{% static 'contatos/css/estilo.css' %}">
+</head>
+<body>
+    {% include "contatos/links.html" %}
+    <h1>Cria um contato</h1>
+    <form action="" method="POST">
+      <fieldset sytle="width: max-content;">
+        <legend>Formulário de cadastro</legend>
+        {% csrf_token %}
+        <table class="formulario">
+          {{formulario.as_table}}
+        </table>
+        <button type="submit">Cria contato</button>
+      </fieldset>
+    </form>
+</body>
+</html>
