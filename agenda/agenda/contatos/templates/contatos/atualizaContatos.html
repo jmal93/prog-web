@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atualiza Contato</title>
+  <link href="{% static 'contatos/css/estilo.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    {% include "contatos/links.html" %}
+    <h1>Atualização de contatos</h1>
+    <form method="POST" class='formulario'>
+      {% csrf_token %}
+      <table>
+        {{ pessoa.as_table }}
+        <tr>
+          <td></td>
+          <td><input type="submit" value="Atualiza"></td>
+        </tr>
+      </table>
+    </form>
+</body>
+
+</html>

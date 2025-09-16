@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pessoas</title>
+  <title>Lista Contatos</title>
   <link href="{% static 'contatos/css/estilo.css' %}" rel="stylesheet">
 </head>
 
@@ -24,6 +24,7 @@
       <td>{{pessoa.nome}}</td>
       <td>{{pessoa.idade}}</td>
       <td>{{pessoa.salario}}</td>
+        <td><a href="{% url 'contatos:atualiza-contato' pk=pessoa.id %}">Atualizar</a></td>
     </tr>
     {% empty %}
     <tr>

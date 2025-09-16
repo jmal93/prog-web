@@ -1,6 +1,7 @@
 from django import forms
 from contatos.models import Pessoa
 
+
 class ContatosModel2Form(forms.ModelForm):
     dtNasc = forms.DateField(
         input_formats=['%d/%m/%Y'],

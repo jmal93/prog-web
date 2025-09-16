@@ -6,7 +6,7 @@ class Pessoa(models.Model):
     nome = models.CharField(max_length=100, help_text='Insira o nome')
     idade = models.IntegerField(help_text='Insira a idade')
     salario = models.DecimalField(
-        help_text='Insira o sálario', decimal_places=2, max_digits=4)
+        help_text='Insira o sálario', decimal_places=2, max_digits=6)
     email = models.EmailField(help_text='Insira o email', max_length=254)
     telefone = models.CharField(
         help_text='Insira o número de telefone com DDD e DDI', max_length=20)
